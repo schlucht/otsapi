@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
-use Ots\Bible\Controllers\UserController;
 use Ots\Bible\Middleware\AddJsonResponseHeader;
 use Slim\Factory\AppFactory;
 use \Ots\Bible\Middleware\CorsMiddleware;
