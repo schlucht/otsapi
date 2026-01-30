@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible;
+namespace Ots\OTS;
 
 use PDO;
 

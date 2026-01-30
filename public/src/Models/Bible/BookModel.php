@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Models\Bible;
+namespace Ots\OTS\Models\Bible;
 
 use DateTime;
-use Ots\Bible\Repositories\Bible\BookRepository;
-use Ots\Bible\Repositories\Bible\TestamentRepository;
-use Ots\Bible\Repositories\Repository;
+use Ots\OTS\Repositories\Bible\BookRepository;
+use Ots\OTS\Repositories\Bible\TestamentRepository;
+use Ots\OTS\Repositories\Repository;
 class BookModel 
 {
     public int $id;    
@@ -18,29 +18,6 @@ class BookModel
     public string $year;
     public string $description;
     public DateTime $createdAt;
-    public DateTime $updatedAt;    
-
-    public function allBooks(): array {        
-        $res =  $this->repo->getAllBooks();
-        $books = [];
-        foreach($res as $t) {
-            $testament = new TestamentModel();
-            $testament->id = $t['t_id'];
-            $testament->name = $t['t_name'];
-            $this->testament = $testament;
-            $this->id = $t['id'];
-            $this->name = $t['name'];
-            $this->abbreviation = $t['abbreviation'];
-            $this->author = $t['author'] ?? '';
-            $this->year = $t['year'] ?? '';
-            $this->description = $t['description'] ?? '';
-            $this->createdAt = new DateTime($t['created_at']);
-            $this->updatedAt = $t['updated_at'] ?? new DateTime();
-            array_push($books, $this);
-        }        
-        return $books;
-    }
-
-
+    public DateTime $updatedAt;  
 }
 

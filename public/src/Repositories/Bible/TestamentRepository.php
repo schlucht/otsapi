@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Repositories\Bible;
+namespace Ots\OTS\Repositories\Bible;
 
-use Ots\Bible\Database;
-use Ots\Bible\Repositories\Repository;
-use Ots\Bible\Models\Bible\TestamentModel;
+use Ots\OTS\Database;
+use Ots\OTS\Repositories\Repository;
+use Ots\OTS\Models\Bible\TestamentModel;
 use DateTime;
 
 class TestamentRepository extends Repository

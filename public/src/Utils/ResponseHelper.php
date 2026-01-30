@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Utils;
+namespace Ots\OTS\Utils;
 
 use Psr\Http\Message\ResponseInterface;
 

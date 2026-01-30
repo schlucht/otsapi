@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ots\\Bible\\": "src/"
+            "Ots\\API\\": "src/"
         }
     },
     "authors": [

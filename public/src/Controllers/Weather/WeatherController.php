@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Controllers\Weather;
+namespace Ots\OTS\Controllers\Weather;
 
-use Ots\Bible\Database;
+use Ots\OTS\Database;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Ots\Bible\Repositories\Weather\WeatherRepository;
-use Ots\Bible\Models\Weather\WeatherModel;
-use Ots\Bible\Utils\ResponseHelper;
-use Ots\Bible\Utils\ResponseMessage;
+use Ots\OTS\Repositories\Weather\WeatherRepository;
+use Ots\OTS\Models\Weather\WeatherModel;
+use Ots\OTS\Utils\ResponseHelper;
+use Ots\OTS\Utils\ResponseMessage;
 
 class WeatherController
 {

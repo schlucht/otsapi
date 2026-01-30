@@ -2,12 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Models\Bible;
+namespace Ots\OTS\Models\Bible;
 
 use DateTime;
-use Ots\Bible\Repositories\Bible\TestamentRepository;
-use Ots\Bible\Repositories\Repository;
-
 
 class TestamentModel 
 {

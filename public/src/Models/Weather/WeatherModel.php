@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Models\Weather;
+namespace Ots\OTS\Models\Weather;
 
 use DateTime;
-
 
 class WeatherModel 
 {

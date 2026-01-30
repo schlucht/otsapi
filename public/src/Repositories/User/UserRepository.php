@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Repositories\User;
+namespace Ots\OTS\Repositories\User;
 
-use Ots\Bible\Repositories\Repository;
-use Ots\Bible\Database;
-use Ots\Bible\Models\User\UserModel;
+use Ots\OTS\Repositories\Repository;
+use Ots\OTS\Database;
+use Ots\OTS\Models\User\UserModel;
 
 class UserRepository extends Repository
 {

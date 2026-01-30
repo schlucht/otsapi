@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Models\User;
+namespace Ots\OTS\Models\User;
 
 use DateTime;
-use Ots\Bible\Repositories\UserRepository;
 
 class UserModel 
 {

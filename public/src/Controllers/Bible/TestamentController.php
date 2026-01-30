@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Controllers\Bible;
+namespace Ots\API\Controllers\Bible;
 
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Ots\Bible\Repositories\Bible\TestamentRepository;
-use Ots\Bible\Utils\ResponseHelper;
-use Ots\Bible\Utils\ResponseMessage;
+use Ots\API\Repositories\Bible\TestamentRepository;
+use Ots\API\Utils\ResponseHelper;
+use Ots\API\Utils\ResponseMessage;
 
 class TestamentController
 {

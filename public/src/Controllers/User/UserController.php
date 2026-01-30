@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Controllers\User;
+namespace Ots\OTS\Controllers\User;
 
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Ots\Bible\Repositories\User\UserRepository;
-use Ots\Bible\Utils\ResponseHelper;
-use Ots\Bible\Utils\ResponseMessage;
+use Ots\OTS\Repositories\User\UserRepository;
+use Ots\OTS\Utils\ResponseHelper;
+use Ots\OTS\Utils\ResponseMessage;
 
 class UserController
 {

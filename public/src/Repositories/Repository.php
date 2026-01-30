@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Repositories;
+namespace Ots\OTS\Repositories;
 
 use DateTime;
-use Ots\Bible\Database;
+use Ots\OTS\Database;
 use PDO;
 
 class Repository

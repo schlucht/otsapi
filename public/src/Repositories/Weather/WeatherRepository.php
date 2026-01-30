@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ots\Bible\Repositories\Weather;
+namespace Ots\OTS\Repositories\Weather;
 
-use Ots\Bible\Database;
-use Ots\Bible\Repositories\Repository;
-use Ots\Bible\Models\Weather\WeatherModel;
+use Ots\OTS\Database;
+use Ots\OTS\Repositories\Repository;
+use Ots\OTS\Models\Weather\WeatherModel;
 
 use DateTime;
 use PDO;
