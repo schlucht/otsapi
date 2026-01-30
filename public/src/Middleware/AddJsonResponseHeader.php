@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Middleware;
+namespace Ots\API\Middleware;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;

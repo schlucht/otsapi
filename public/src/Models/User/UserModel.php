@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Models\User;
+namespace Ots\API\Models\User;
 
 use DateTime;
 

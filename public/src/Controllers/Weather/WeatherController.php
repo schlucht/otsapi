@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Controllers\Weather;
+namespace Ots\API\Controllers\Weather;
 
 use Ots\OTS\Database;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Ots\OTS\Repositories\Weather\WeatherRepository;
-use Ots\OTS\Models\Weather\WeatherModel;
-use Ots\OTS\Utils\ResponseHelper;
-use Ots\OTS\Utils\ResponseMessage;
+use Ots\API\Repositories\Weather\WeatherRepository;
+use Ots\API\Models\Weather\WeatherModel;
+use Ots\API\Utils\ResponseHelper;
+use Ots\API\Utils\ResponseMessage;
 
 class WeatherController
 {

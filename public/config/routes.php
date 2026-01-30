@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use Slim\App;
-use Ots\Bible\Controllers\User\UserController;
-use Ots\Bible\Controllers\Bible\BookController;
-use Ots\Bible\Controllers\Bible\TestamentController;
-use Ots\Bible\Controllers\Weather\WeatherController;
-use Ots\Bible\Controllers\User\AuthController;
-use Ots\Bible\Middleware\AuthMiddleware;
+use Ots\API\Controllers\User\UserController;
+use Ots\API\Controllers\Bible\BookController;
+use Ots\API\Controllers\Bible\TestamentController;
+use Ots\API\Controllers\Weather\WeatherController;
+use Ots\API\Controllers\User\AuthController;
+use Ots\API\Middleware\AuthMiddleware;
 
 return function (App $app) {
     // --- Public Routes ---

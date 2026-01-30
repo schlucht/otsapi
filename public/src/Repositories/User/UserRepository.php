@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Repositories\User;
+namespace Ots\API\Repositories\User;
 
-use Ots\OTS\Repositories\Repository;
-use Ots\OTS\Database;
-use Ots\OTS\Models\User\UserModel;
+use Ots\API\Repositories\Repository;
+use Ots\API\Database;
+use Ots\API\Models\User\UserModel;
 
 class UserRepository extends Repository
 {

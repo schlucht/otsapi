@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Models\Weather;
+namespace Ots\API\Models\Weather;
 
 use DateTime;
 

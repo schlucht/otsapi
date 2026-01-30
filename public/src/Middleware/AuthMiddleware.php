@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Middleware;
+namespace Ots\API\Middleware;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
 use Psr\Http\Message\ResponseInterface as Response;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-use Ots\OTS\Utils\ResponseHelper;
-use Ots\OTS\Utils\ResponseMessage;
+use Ots\API\Utils\ResponseHelper;
+use Ots\API\Utils\ResponseMessage;
 
 class AuthMiddleware
 {

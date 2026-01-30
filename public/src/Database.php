@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS;
+namespace Ots\API;
 
 use PDO;
 

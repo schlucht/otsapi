@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Models\Bible;
+namespace Ots\API\Models\Bible;
 
 use DateTime;
 

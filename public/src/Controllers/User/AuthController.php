@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Controllers\User;
+namespace Ots\API\Controllers\User;
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use Ots\OTS\Utils\ResponseHelper;
-use Ots\OTS\Utils\ResponseMessage;
-use Ots\OTS\Repositories\User\UserRepository;
+use Ots\API\Utils\ResponseHelper;
+use Ots\API\Utils\ResponseMessage;
+use Ots\API\Repositories\User\UserRepository;
 
-use Ots\OTS\Models\User\UserModel;
+use Ots\API\Models\User\UserModel;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 

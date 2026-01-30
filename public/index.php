@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
-use Ots\Bible\Middleware\AddJsonResponseHeader;
+use Ots\API\Middleware\AddJsonResponseHeader;
 use Slim\Factory\AppFactory;
-use \Ots\Bible\Middleware\CorsMiddleware;
+use \Ots\API\Middleware\CorsMiddleware;
    
 require dirname(__DIR__) . '/public/vendor/autoload.php';
 

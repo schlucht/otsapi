@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ots\OTS\Utils;
+namespace Ots\API\Utils;
 
 use Psr\Http\Message\ResponseInterface;
 
