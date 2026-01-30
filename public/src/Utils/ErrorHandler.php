@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Ots\API\Http;
 
 use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-use Psr\Log\LoggerInterface;
 use Slim\Exception\HttpException;
-use Slim\Interfaces\ErrorHandlerInterface;
 use Slim\Psr7\Factory\ResponseFactory;
 use Throwable;
 
@@ -16,12 +13,10 @@ class ErrorHandler
 {
     public function __construct(
         private ResponseFactory $responseFactory,
-        private ?LoggerInterface $logger = null,
         private bool $includeDetailsInResponse = false
     ) {}
 
     public function handle(
-        ServerRequestInterface $request,
         Throwable $exception
     ): ResponseInterface {
         $status = 500;

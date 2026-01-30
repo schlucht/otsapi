@@ -22,7 +22,7 @@ return function (App $app) {
         $group->get('', [WeatherController::class, 'index']);
         $group->post('', [WeatherController::class, 'store']);
         $group->get('/{id}', [WeatherController::class, 'show']);
-    });
+    })->add(AuthMiddleware::class);
     
     // Authentication
     $app->post('/api/auth/register', [AuthController::class, 'register']);
