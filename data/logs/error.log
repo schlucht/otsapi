@@ -78,3 +78,6 @@
 [Thu Dec 04 14:13:52.153245 2025] [proxy_fcgi:error] [pid 9:tid 77] [client 172.18.0.1:44604] AH01079: failed to make connection to backend: php, referer: https://idx.google.com/
 [Wed Dec 10 07:49:52.442654 2025] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.65 (Unix) configured -- resuming normal operations
 [Wed Dec 10 07:49:52.446045 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND'
+[Thu Jan 15 10:29:58.728012 2026] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.66 (Unix) configured -- resuming normal operations
+[Thu Jan 15 10:29:58.728148 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND'
+[Thu Jan 15 10:53:22.986186 2026] [mpm_event:notice] [pid 1:tid 1] AH00492: caught SIGWINCH, shutting down gracefully

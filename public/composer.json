@@ -5,7 +5,8 @@
         "slim/slim": "^4.15",
         "slim/psr7": "^1.7",
         "php-di/php-di": "^7.1",
-        "firebase/php-jwt": "^6.11"
+        "firebase/php-jwt": "^6.11",
+        "davedevelopment/phpmig": "^1.7"
     },
     "autoload": {
         "psr-4": {
