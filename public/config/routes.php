@@ -9,8 +9,12 @@ use Ots\API\Controllers\Bible\TestamentController;
 use Ots\API\Controllers\Weather\WeatherController;
 use Ots\API\Controllers\User\AuthController;
 use Ots\API\Middleware\AuthMiddleware;
+use Ots\API\Middleware\RateLimitMiddleware;
 
 return function (App $app) {
+    // Get database from container for rate limiting
+    $database = $app->getContainer()->get(\Ots\API\Database::class);
+    
     // --- Public Routes ---
 
     // Bible
@@ -24,9 +28,12 @@ return function (App $app) {
         $group->get('/{id}', [WeatherController::class, 'show']);
     })->add(AuthMiddleware::class);
     
-    // Authentication
-    $app->post('/api/auth/register', [AuthController::class, 'register']);
-    $app->post('/api/auth/login', [AuthController::class, 'login']);
+    // Authentication - with rate limiting to prevent brute force
+    $app->post('/api/auth/register', [AuthController::class, 'register'])
+        ->add(new RateLimitMiddleware($database, 5, 3600)); // 5 registrations per hour
+    
+    $app->post('/api/auth/login', [AuthController::class, 'login'])
+        ->add(new RateLimitMiddleware($database, 5, 300)); // 5 login attempts per 5 minutes
     
     // --- Protected User Routes ---
     $app->group('/api/users', function ($group) {

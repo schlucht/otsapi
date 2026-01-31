@@ -87,7 +87,7 @@ class UserRepository extends Repository
     {
         try {
             $this->pdo = $this->database->getConnection();
-            $sql = "SELECT user_id, firstname, lastname, email FROM $this->table WHERE user_id = :id";
+            $sql = "SELECT user_id, firstname, lastname, email, create_at, updated_at FROM $this->table WHERE user_id = :id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(':id', $id);
             $stmt->execute();
@@ -98,6 +98,8 @@ class UserRepository extends Repository
                 $user->firstname = $res['firstname'];
                 $user->lastname = $res['lastname'];
                 $user->email = $res['email'];
+                $user->created = new \DateTime($res['created_at']);
+                $user->updated = new \DateTime($res['updated_at']);
                 return $user;
             }
             return null;
@@ -122,7 +124,8 @@ class UserRepository extends Repository
 
     public function update(UserModel $user): ?UserModel {
         try {            
-            $sql = "UPDATE $this->table SET firstname=:firstname, lastname=:lastname, mail=:email, updated_at=NOW() WHERE user_id = :id";
+            $this->pdo = $this->database->getConnection();
+            $sql = "UPDATE $this->table SET firstname=:firstname, lastname=:lastname, email=:email, updated_at=NOW() WHERE user_id = :id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(':id', $user->id);
             $stmt->bindValue(':firstname', $user->firstname);
