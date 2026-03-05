@@ -119,22 +119,21 @@ class AuthController
 
     public function me(Request $request, Response $response): Response
     { 
+        $user = null;
         $resp = new ResponseHelper($response);
         try {
             // Get user ID from request attribute (set by AuthMiddleware)
             $userId = $request->getAttribute('user_id');
-            
             if (!$userId) {
                 return $resp->write(new ResponseMessage(false, null, 'Unauthorized'), 401);
-            }
-
-            $user = $this->repo->findById($userId);
-            
+                }
+                
+                $user = $this->repo->findById($userId);
             if (!$user) {
                 return $resp->write(new ResponseMessage(false, null, 'User not found'), 404);
             }
             return $resp->write(new ResponseMessage(true, $user));
-        } catch (\Exception $e) {
+        } catch (\Exception $e) {            
             error_log('Me endpoint error: ' . $e->getMessage());
             return $resp->write(new ResponseMessage(false, null, 'Failed to retrieve user'), 500);
         }

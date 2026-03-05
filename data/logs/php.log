@@ -813,3 +813,64 @@ Trace: #0 /var/www/html/public/src/Controllers/Weather/WeatherController.php(52)
 #15 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
 #16 /var/www/html/public/index.php(27): Slim\App->run()
 #17 {main}
+[31-Jan-2026 19:15:22 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[31-Jan-2026 19:15:22 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[03-Feb-2026 14:11:59 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(28): Slim\App->run()
+#13 {main}
+[21-Feb-2026 15:46:46 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:47:44 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:48:42 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:49:35 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:50:49 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:55:53 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:56:23 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:57:17 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:57:48 UTC] Me endpoint error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'create_at' in 'field list'
+[21-Feb-2026 15:58:11 UTC] Slim Application Error
+Type: TypeError
+Code: 0
+Message: DateTime::__construct(): Argument #1 ($datetime) must be of type string, null given
+File: /var/www/html/public/src/Repositories/User/UserRepository.php
+Line: 102
+Trace: #0 /var/www/html/public/src/Repositories/User/UserRepository.php(102): DateTime->__construct(NULL)
+#1 /var/www/html/public/src/Controllers/User/AuthController.php(131): Ots\API\Repositories\User\UserRepository->findById(11)
+#2 /var/www/html/public/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(39): Ots\API\Controllers\User\AuthController->me(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /var/www/html/public/vendor/slim/slim/Slim/Routing/Route.php(362): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/public/src/Middleware/AuthMiddleware.php(51): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(178): Ots\API\Middleware\AuthMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#7 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/Routing/Route.php(321): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#9 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(74): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#12 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#13 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#14 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#15 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#16 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#17 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#18 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#19 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#20 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#21 /var/www/html/public/index.php(41): Slim\App->run()
+#22 {main}
+Tips: To display error details in HTTP response set "displayErrorDetails" to true in the ErrorHandler constructor.

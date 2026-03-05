@@ -1,9 +1,8 @@
 --
--- Datenbank: `schlucht`
+-- Datenbank: `schlucht` User und Authentifizierung
 --
 -- Tabellenstruktur für Tabelle `users`
---
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `firstname` varchar(255) NOT NULL,
   `lastname` varchar(255) NOT NULL,
@@ -11,13 +10,15 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`)
+  PRIMARY KEY (`user_id`),
+  INDEX `idx_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Tabellenstruktur für Tabelle `rate_limits`
-CREATE TABLE rate_limits (
-    identifier VARCHAR(255) PRIMARY KEY,
-    attempts TEXT,
-    updated_at TIMESTAMP
-);
+CREATE TABLE IF NOT EXISTS `rate_limits` (
+    `identifier` VARCHAR(255) PRIMARY KEY,
+    `attempts` TEXT NOT NULL,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX `idx_updated_at` (`updated_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;;
 

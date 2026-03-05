@@ -87,7 +87,7 @@ class UserRepository extends Repository
     {
         try {
             $this->pdo = $this->database->getConnection();
-            $sql = "SELECT user_id, firstname, lastname, email, create_at, updated_at FROM $this->table WHERE user_id = :id";
+            $sql = "SELECT user_id, firstname, lastname, email, updated_at FROM $this->table WHERE user_id = :id";
             $stmt = $this->pdo->prepare($sql);
             $stmt->bindValue(':id', $id);
             $stmt->execute();
@@ -97,13 +97,12 @@ class UserRepository extends Repository
                 $user->id = (int)$res['user_id'];
                 $user->firstname = $res['firstname'];
                 $user->lastname = $res['lastname'];
-                $user->email = $res['email'];
-                $user->created = new \DateTime($res['created_at']);
-                $user->updated = new \DateTime($res['updated_at']);
+                $user->email = $res['email'];                
+                $user->updated = new \DateTime($res['updated_at']);                
                 return $user;
             }
             return null;
-        } catch (\PDOException $e) {
+        } catch (\PDOException $e) {                      
             throw $e;
         }
     }

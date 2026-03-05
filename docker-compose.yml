@@ -21,6 +21,8 @@ services:
             - ./:/var/www/html
             - ./webserver/php-ini-overrides.ini:/usr/local/etc/php/conf.d/extra.ini
             - ./data/logs:/var/log
+        environment:
+            JWT_SECRET: "dein_sehr_sicherer_geheimer_schluessel_hier"
     db:
         image: mysql:latest
         container_name: db

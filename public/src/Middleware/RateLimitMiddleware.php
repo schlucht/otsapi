@@ -22,7 +22,9 @@ class RateLimitMiddleware
 {
     private int $maxAttempts;
     private int $decaySeconds;
-    private \PDO $pdo;
+    private Database $database;
+    private ?\PDO $pdo = null;
+    private bool $dbAvailable = true;
 
     /**
      * @param Database $database Database connection
@@ -33,11 +35,37 @@ class RateLimitMiddleware
     {
         $this->maxAttempts = $maxAttempts;
         $this->decaySeconds = $decaySeconds;
-        $this->pdo = $database->getConnection();
+        $this->database = $database;
+    }
+    
+    private function getConnection(): ?\PDO
+    {
+        if (!$this->dbAvailable) {
+            return null;
+        }
+        
+        if ($this->pdo !== null) {
+            return $this->pdo;
+        }
+        
+        try {
+            $this->pdo = $this->database->getConnection();
+            return $this->pdo;
+        } catch (\Exception $e) {
+            error_log('Rate limit: Database connection failed - ' . $e->getMessage());
+            $this->dbAvailable = false;
+            return null;
+        }
     }
 
     public function __invoke(Request $request, RequestHandler $handler): Response
     {
+        // Wenn DB nicht verfügbar, Request durchlassen (fail-open)
+        $pdo = $this->getConnection();
+        if ($pdo === null) {
+            return $handler->handle($request);
+        }
+        
         $identifier = $this->getIdentifier($request);
         $key = $this->generateKey($identifier);
         
@@ -100,14 +128,19 @@ class RateLimitMiddleware
 
     private function getAttempts(string $key): array
     {
+        $pdo = $this->getConnection();
+        if ($pdo === null) {
+            return [];
+        }
+        
         try {
             // Cleanup old entries first
             $cutoff = date('Y-m-d H:i:s', time() - $this->decaySeconds);
-            $stmt = $this->pdo->prepare("DELETE FROM rate_limits WHERE updated_at < :cutoff");
+            $stmt = $pdo->prepare("DELETE FROM rate_limits WHERE updated_at < :cutoff");
             $stmt->execute(['cutoff' => $cutoff]);
             
             // Get current attempts
-            $stmt = $this->pdo->prepare("SELECT attempts FROM rate_limits WHERE identifier = :key");
+            $stmt = $pdo->prepare("SELECT attempts FROM rate_limits WHERE identifier = :key");
             $stmt->execute(['key' => $key]);
             $result = $stmt->fetch(\PDO::FETCH_ASSOC);
             
@@ -123,9 +156,14 @@ class RateLimitMiddleware
 
     private function saveAttempts(string $key, array $attempts): void
     {
+        $pdo = $this->getConnection();
+        if ($pdo === null) {
+            return;
+        }
+        
         try {
             $json = json_encode($attempts);
-            $stmt = $this->pdo->prepare(
+            $stmt = $pdo->prepare(
                 "INSERT INTO rate_limits (identifier, attempts, updated_at) 
                  VALUES (:key, :attempts, NOW()) 
                  ON DUPLICATE KEY UPDATE attempts = :attempts, updated_at = NOW()"

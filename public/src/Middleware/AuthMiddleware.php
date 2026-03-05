@@ -29,11 +29,10 @@ class AuthMiddleware
     public function __invoke(Request $request, RequestHandler $handler): Response
     {
         $authHeader = $request->getHeaderLine('Authorization');
-        
         if (empty($authHeader) || !str_starts_with($authHeader, 'Bearer ')) {
             $response = new \Slim\Psr7\Response();
             $resp = new ResponseHelper($response);
-            return $resp->write(new ResponseMessage(false, null, 'Fehler Baeren: Authentication required'), 401);        
+            return $resp->write(new ResponseMessage(false, null, 'Fehler Bearer: Authentication required'), 401);        
         }
         
         $token = substr($authHeader, 7);        

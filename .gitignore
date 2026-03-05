@@ -1,2 +1,3 @@
 ./data
 public/vendor
+public/config/config_local.php

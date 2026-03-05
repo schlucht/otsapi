@@ -24,8 +24,7 @@ class UserController
         $resp = new ResponseHelper($response);            
         try {
             $res = $this->repo->getUsers();
-            $body = json_encode($res);
-            $message = new ResponseMessage(true, $body, null);
+            $message = new ResponseMessage(true, $res, null);
             return $resp->write($message, 200);            
         } catch (\Exception $e) {
             return $resp->write(new ResponseMessage(false, null, $e->getMessage()), 500);            
@@ -41,8 +40,7 @@ class UserController
             $id = isset($args['id']) ? (int)$args['id'] : 0;
             $user = $this->repo->findById($id);
             if ($user) {
-                $body = json_encode($user);
-                return $resp->write(new ResponseMessage(true, $body, null), 200);            
+                return $resp->write(new ResponseMessage(true, $user, null), 200);            
             } else {
                 return $resp->write(new ResponseMessage(false, null, 'User not found'), 404);            
             }
