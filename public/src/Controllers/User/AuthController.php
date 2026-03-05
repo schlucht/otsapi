@@ -78,7 +78,7 @@ class AuthController
 
     public function login(Request $request, Response $response): Response
     {
-        $resp = new ResponseHelper($response);
+        $resp = new ResponseHelper($response);        
         try {
             $data = $request->getParsedBody();
             $missing = Validator::validateRequired($data, ['email', 'password']);
@@ -97,7 +97,7 @@ class AuthController
                     'iat' => time(),
                     'exp' => time() + 3600
                 ];
-                $token = JWT::encode($payload, $this->secret, 'HS256');
+                $token = JWT::encode($payload, JWT_SECRET, 'HS256');
 
                 return $resp->write(new ResponseMessage(true, [
                     'token' => $token,
@@ -112,7 +112,8 @@ class AuthController
             }
             return $resp->write(new ResponseMessage(false, null, 'Invalid credentials'), 401);
         } catch (\Exception $e) {
-            error_log('Login error: ' . $e->getMessage());
+            error_log('Login error: ' . $e->getMessage());    
+            var_dump($e->getMessage());        
             return $resp->write(new ResponseMessage(false, null, 'Authentication failed'), 500);
         }
     }

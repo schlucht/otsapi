@@ -20,7 +20,7 @@ class AuthMiddleware
 
     public function __construct()
     {
-        $this->secret = "Birgisch-3903-Schlucht"; //getenv('JWT_SECRET');
+        $this->secret = JWT_SECRET; //getenv('JWT_SECRET');
         if ($this->secret === false) {
             throw new \Exception("JWT_SECRET environment variable not set.");
         }
@@ -44,8 +44,13 @@ class AuthMiddleware
 
         try {
             $payload = JWT::decode($token, new Key($this->secret, 'HS256'));
+
+            if (!isset($payload->sub) || !is_numeric($payload->sub)) {
+                throw new \UnexpectedValueException('Token payload missing valid subject.');
+            }
+
             $request = $request
-            ->withAttribute('user_id', $payload->sub)
+            ->withAttribute('user_id', (int)$payload->sub)
             ->withAttribute('user_email', $payload->email);
             return $handler->handle($request);
         } catch (ExpiredException $e) {
@@ -60,7 +65,7 @@ class AuthMiddleware
             error_log('Auth middleware error: ' . $e->getMessage());
             $response = new \Slim\Psr7\Response();
             $resp = new ResponseHelper($response);
-            return $resp->write(new ResponseMessage(false, null, 'Invalid token'), 401);
+            return $resp->write(new ResponseMessage(false, $e->getMessage(), 'Invalid token'), 401);
         }
     }
 }

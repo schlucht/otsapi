@@ -10,6 +10,7 @@ use Ots\API\Controllers\Weather\WeatherController;
 use Ots\API\Controllers\User\AuthController;
 use Ots\API\Middleware\AuthMiddleware;
 use Ots\API\Middleware\RateLimitMiddleware;
+use \Ots\API\Controllers\Diary\DiaryController;
 
 return function (App $app) {
     // Get database from container for rate limiting
@@ -41,6 +42,14 @@ return function (App $app) {
         $group->get('/me', [AuthController::class, 'me']); // Get current user
         $group->get('/{id:[0-9]+}', [UserController::class, 'userById']);
         $group->delete('/{id:[0-9]+}', [UserController::class, 'delete']);
+    })->add(AuthMiddleware::class);
+
+    $app->group('/api/diary', function ($group) {
+        $group->get('', [DiaryController::class, 'index']);
+        $group->post('', [DiaryController::class, 'store']);
+        $group->get('/{id}', [DiaryController::class, 'show']);
+        $group->put('/{id}', [DiaryController::class, 'update']);
+        $group->delete('/{id}', [DiaryController::class, 'delete']);
     })->add(AuthMiddleware::class);
 
 };

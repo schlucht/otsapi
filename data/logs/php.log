@@ -874,3 +874,362 @@ Trace: #0 /var/www/html/public/src/Repositories/User/UserRepository.php(102): Da
 #21 /var/www/html/public/index.php(41): Slim\App->run()
 #22 {main}
 Tips: To display error details in HTTP response set "displayErrorDetails" to true in the ErrorHandler constructor.
+[05-Mar-2026 09:41:33 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 09:41:33 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 09:49:31 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 09:49:47 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 09:50:15 UTC] 405 Method Not Allowed
+Type: Slim\Exception\HttpMethodNotAllowedException
+Code: 405
+Message: Method not allowed. Must be one of: POST
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 79
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 09:51:09 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:51:09 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:51:09 UTC] Login error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.users' doesn't exist
+[05-Mar-2026 09:55:59 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:55:59 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:56:39 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:56:39 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:56:39 UTC] Login error: Provided key is too short
+[05-Mar-2026 09:56:55 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:56:55 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:56:56 UTC] Login error: Provided key is too short
+[05-Mar-2026 09:59:09 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:59:09 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 09:59:09 UTC] Login error: Provided key is too short
+[05-Mar-2026 10:00:30 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:00:30 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:00:30 UTC] Login error: Provided key is too short
+[05-Mar-2026 10:03:33 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:03:33 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:03:33 UTC] Login error: Provided key is too short
+[05-Mar-2026 10:05:09 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:05:09 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:05:09 UTC] Login error: Provided key is too short
+[05-Mar-2026 10:05:40 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:05:40 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:05:40 UTC] Login error: Provided key is too short
+[05-Mar-2026 10:06:48 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:06:48 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:22:58 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:22:58 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:23:51 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:23:51 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:25:21 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:25:21 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:25:53 UTC] Auth middleware error: Provided key is too short
+[05-Mar-2026 10:26:40 UTC] Auth middleware error: Unexpected control character found
+[05-Mar-2026 10:26:58 UTC] Auth middleware error: Unexpected control character found
+[05-Mar-2026 10:27:44 UTC] 405 Method Not Allowed
+Type: Slim\Exception\HttpMethodNotAllowedException
+Code: 405
+Message: Method not allowed. Must be one of: POST
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 79
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:27:55 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:27:55 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:28:56 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:29:27 UTC] Auth middleware error: Provided key is too short
+[05-Mar-2026 10:30:47 UTC] Auth middleware error: Provided key is too short
+[05-Mar-2026 10:31:24 UTC] Auth middleware error: Error while injecting dependencies into Ots\API\Controllers\Diary\DiaryController: No entry or class found for 'Ots\API\Controllers\Diary\DirayRepository'
+[05-Mar-2026 10:32:26 UTC] Auth middleware error: Error while injecting dependencies into Ots\API\Controllers\Diary\DiaryController: No entry or class found for 'Ots\API\Controllers\Diary\DirayRepository'
+[05-Mar-2026 10:35:38 UTC] Slim Application Error
+Type: Error
+Code: 0
+Message: Class "Ots\API\Models\Diary\DiarysModel" not found
+File: /var/www/html/public/src/Repositories/Diary/DiaryRepository.php
+Line: 27
+Trace: #0 /var/www/html/public/src/Controllers/Diary/DiaryController.php(21): Ots\API\Repositories\Diary\DiaryRepository->getDiaryEntries()
+#1 /var/www/html/public/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(39): Ots\API\Controllers\Diary\DiaryController->index(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /var/www/html/public/vendor/slim/slim/Slim/Routing/Route.php(362): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/src/Middleware/AuthMiddleware.php(50): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(178): Ots\API\Middleware\AuthMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#7 /var/www/html/public/vendor/slim/slim/Slim/Routing/Route.php(321): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(74): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#19 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#20 /var/www/html/public/index.php(41): Slim\App->run()
+#21 {main}
+[05-Mar-2026 10:36:14 UTC] Slim Application Error
+Type: Error
+Code: 0
+Message: Class "Ots\API\Repositories\Diary\DiarysModel" not found
+File: /var/www/html/public/src/Repositories/Diary/DiaryRepository.php
+Line: 27
+Trace: #0 /var/www/html/public/src/Controllers/Diary/DiaryController.php(21): Ots\API\Repositories\Diary\DiaryRepository->getDiaryEntries()
+#1 /var/www/html/public/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php(39): Ots\API\Controllers\Diary\DiaryController->index(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#2 /var/www/html/public/vendor/slim/slim/Slim/Routing/Route.php(362): Slim\Handlers\Strategies\RequestResponse->__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#3 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Slim\Routing\Route->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/src/Middleware/AuthMiddleware.php(50): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#5 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(178): Ots\API\Middleware\AuthMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\MiddlewareDispatcher))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#7 /var/www/html/public/vendor/slim/slim/Slim/Routing/Route.php(321): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(74): Slim\Routing\Route->run(Object(Slim\Psr7\Request))
+#9 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#11 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#13 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#14 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#15 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#16 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#17 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#18 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#19 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#20 /var/www/html/public/index.php(41): Slim\App->run()
+#21 {main}
+[05-Mar-2026 10:41:30 UTC] 405 Method Not Allowed
+Type: Slim\Exception\HttpMethodNotAllowedException
+Code: 405
+Message: Method not allowed. Must be one of: POST
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 79
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
+[05-Mar-2026 10:41:37 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 10:41:37 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 11:16:29 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 11:16:29 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[05-Mar-2026 11:16:56 UTC] 404 Not Found
+Type: Slim\Exception\HttpNotFoundException
+Code: 404
+Message: Not found.
+File: /var/www/html/public/vendor/slim/slim/Slim/Middleware/RoutingMiddleware.php
+Line: 76
+Trace: #0 /var/www/html/public/vendor/slim/slim/Slim/Routing/RouteRunner.php(62): Slim\Middleware\RoutingMiddleware->performRouting(Object(Slim\Psr7\Request))
+#1 /var/www/html/public/src/Middleware/CorsMiddleware.php(35): Slim\Routing\RouteRunner->handle(Object(Slim\Psr7\Request))
+#2 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\CorsMiddleware->__invoke(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#3 /var/www/html/public/vendor/slim/slim/Slim/Middleware/BodyParsingMiddleware.php(64): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#4 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\BodyParsingMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#5 /var/www/html/public/vendor/slim/slim/Slim/Middleware/ErrorMiddleware.php(77): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#6 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware->process(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#7 /var/www/html/public/src/Middleware/AddJsonResponseHeader.php(15): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#8 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(283): Ots\API\Middleware\AddJsonResponseHeader->__invoke(Object(Slim\Psr7\Request), Object(Psr\Http\Server\RequestHandlerInterface@anonymous))
+#9 /var/www/html/public/vendor/slim/slim/Slim/MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous->handle(Object(Slim\Psr7\Request))
+#10 /var/www/html/public/vendor/slim/slim/Slim/App.php(209): Slim\MiddlewareDispatcher->handle(Object(Slim\Psr7\Request))
+#11 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
+#12 /var/www/html/public/index.php(41): Slim\App->run()
+#13 {main}
