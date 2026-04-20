@@ -6,6 +6,8 @@ use Slim\App;
 use Ots\API\Controllers\User\UserController;
 use Ots\API\Controllers\Bible\BookController;
 use Ots\API\Controllers\Bible\TestamentController;
+use Ots\API\Controllers\Book\AuthorController;
+use Ots\API\Controllers\Book\GenresController;
 use Ots\API\Controllers\Weather\WeatherController;
 use Ots\API\Controllers\User\AuthController;
 use Ots\API\Middleware\AuthMiddleware;
@@ -50,6 +52,22 @@ return function (App $app) {
         $group->get('/{id}', [DiaryController::class, 'show']);
         $group->put('/{id}', [DiaryController::class, 'update']);
         $group->delete('/{id}', [DiaryController::class, 'delete']);
+    })->add(AuthMiddleware::class);
+
+    $app->group('/api/author', function ($group) {
+        $group->get('', [AuthorController::class, 'index']);
+        $group->post('', [AuthorController::class, 'store']);
+        $group->get('/{id}', [AuthorController::class, 'show']);
+        $group->put('/{id}', [AuthorController::class, 'update']);
+        $group->delete('/{id}', [AuthorController::class, 'delete']);
+    })->add(AuthMiddleware::class);
+
+    $app->group('/api/genre', function ($group) {
+        $group->get('', [GenresController::class, 'index']);
+        $group->post('', [GenresController::class, 'store']);
+        $group->get('/{id}', [GenresController::class, 'show']);
+        $group->put('/{id}', [GenresController::class, 'update']);
+        $group->delete('/{id}', [GenresController::class, 'delete']);
     })->add(AuthMiddleware::class);
 
 };

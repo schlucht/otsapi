@@ -30,6 +30,7 @@ class AuthController
         $resp = new ResponseHelper($response);
         try {
             $data = $request->getParsedBody();
+            var_dump($data);
             $missing = Validator::validateRequired($data, ['firstname', 'lastname', 'email', 'password']);
             if (!empty($missing)) {
                 return $resp->write(
