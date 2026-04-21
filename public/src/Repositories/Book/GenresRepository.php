@@ -7,7 +7,7 @@ use Ots\API\Database;
 use Ots\API\Repositories\Repository;
 use Ots\Api\Models\Book\GenreModel;
 
-class GenresRepositiory extends Repository {
+class GenresRepository extends Repository {
     public function __construct(private Database $database) {
         parent::__construct($database);
         $this->table = "genres";

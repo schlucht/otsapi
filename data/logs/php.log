@@ -1454,3 +1454,7 @@ Trace: #0 /var/www/html/public/src/Controllers/Book/AuthorController.php(19): Ot
 #19 /var/www/html/public/vendor/slim/slim/Slim/App.php(193): Slim\App->handle(Object(Slim\Psr7\Request))
 #20 /var/www/html/public/index.php(41): Slim\App->run()
 #21 {main}
+[21-Apr-2026 06:39:07 UTC] Rate limit DB error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[21-Apr-2026 06:39:07 UTC] Rate limit DB save error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'schlucht.rate_limits' doesn't exist
+[21-Apr-2026 06:42:53 UTC] Auth middleware error: Ots\API\Controllers\Book\AuthorController:delete is not resolvable
+[21-Apr-2026 06:43:25 UTC] Auth middleware error: Ots\API\Controllers\Book\AuthorController:delete is not resolvable

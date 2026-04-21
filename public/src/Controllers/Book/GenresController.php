@@ -2,7 +2,7 @@
 
 namespace Ots\API\Controllers\Book;
 
-use Ots\API\Repositories\Book\GenresRepositiory;
+use Ots\API\Repositories\Book\GenresRepository;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use Ots\API\Utils\ResponseHelper;
@@ -10,7 +10,7 @@ use Ots\API\Utils\ResponseMessage;
 
 class GenresController {
 
-    public function __construct(private GenresRepositiory $repo)
+    public function __construct(private GenresRepository $repo)
     {        
     }    
     public function index() {        

@@ -48,11 +48,6 @@ class AuthMiddleware
             if (!isset($payload->sub) || !is_numeric($payload->sub)) {
                 throw new \UnexpectedValueException('Token payload missing valid subject.');
             }
-
-            $request = $request
-            ->withAttribute('user_id', (int)$payload->sub)
-            ->withAttribute('user_email', $payload->email);
-            return $handler->handle($request);
         } catch (ExpiredException $e) {
             $response = new \Slim\Psr7\Response();
             $resp = new ResponseHelper($response);
@@ -67,5 +62,11 @@ class AuthMiddleware
             $resp = new ResponseHelper($response);
             return $resp->write(new ResponseMessage(false, $e->getMessage(), 'Invalid token'), 401);
         }
+
+        $request = $request
+            ->withAttribute('user_id', (int)$payload->sub)
+            ->withAttribute('user_email', $payload->email);
+
+        return $handler->handle($request);
     }
 }
