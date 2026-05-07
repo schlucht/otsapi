@@ -34,6 +34,9 @@ return function (App $app) {
     // Authentication - with rate limiting to prevent brute force
     $app->post('/api/auth/register', [AuthController::class, 'register'])
         ->add(new RateLimitMiddleware($database, 5, 3600)); // 5 registrations per hour
+
+    $app->post('/api/auth/testEmail', [AuthController::class, 'testEmail'])
+        ->add(new RateLimitMiddleware($database, 5, 3600)); // 5 registrations per hour
     
     $app->post('/api/auth/login', [AuthController::class, 'login'])
         ->add(new RateLimitMiddleware($database, 5, 300)); // 5 login attempts per 5 minutes

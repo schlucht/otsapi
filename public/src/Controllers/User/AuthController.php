@@ -140,4 +140,20 @@ class AuthController
             return $resp->write(new ResponseMessage(false, null, 'Failed to retrieve user'), 500);
         }
     }
+
+    public function testEmail(Request $request, Response $response): Response
+    {
+        $resp = new ResponseHelper($response);
+        try {
+            $data = $this->repo->findByEmail($request->getParsedBody()['email']);
+            if (!$data) {
+                return $resp->write(new ResponseMessage(true, ['confirm' => true]));
+            } else {
+                return $resp->write(new ResponseMessage(true, ['confirm' => false]));
+            }
+        } catch (\Exception $e) {
+            error_log('Me endpoint error: ' . $e->getMessage());
+            return $resp->write(new ResponseMessage(false, null, 'Error on server'), 500);
+        }
+    }
 }
