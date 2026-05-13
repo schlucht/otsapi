@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Slim\App;
 use Ots\API\Controllers\User\UserController;
 use Ots\API\Controllers\Bible\BookController;
-use Ots\API\Controllers\Bible\TestamentController;
 use Ots\API\Controllers\Book\AuthorController;
 use Ots\API\Controllers\Book\GenresController;
 use Ots\API\Controllers\Weather\WeatherController;
@@ -20,9 +19,12 @@ return function (App $app) {
     
     // --- Public Routes ---
 
-    // Bible
-    $app->get('/api/bible/books', [BookController::class, 'allBooks']);
-    $app->get('/api/bible/testaments', [TestamentController::class, 'allTestaments']);
+    // Bible freie Seiten
+    $app->group('/api/bible', function ($group) {
+        $group->get('/', [BookController::class, 'allBooks']);
+        $group->get('/{testament}', [BookController::class, 'booksFromTestament']);  
+        $group->get('/chapter/{book}', [BookController::class, 'bookFromBook']);  
+    });
 
     // Weather
     $app->group('/api/weather', function ($group) {

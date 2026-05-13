@@ -6,11 +6,11 @@ namespace Ots\API\Models\Bible;
 
 use DateTime;
 
-class ChapterModel 
+class TranslationModelModel 
 {
-    public int $id;
-    public int $bookId;
-    public int $chapterNr;
+    public int $id;   
+    public string $name;
+    public string $language;
     public string $description;
     public DateTime $createdAt;
     public DateTime $updatedAt;

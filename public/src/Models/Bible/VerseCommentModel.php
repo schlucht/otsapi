@@ -6,11 +6,12 @@ namespace Ots\API\Models\Bible;
 
 use DateTime;
 
-class TestamentModel 
+class VerseCommentModel 
 {
     public int $id;
-    public string $name;
+    public int $verseId;
+    public int $userId;
+    public string $text;
     public DateTime $createdAt;
     public DateTime $updatedAt;
-
 }

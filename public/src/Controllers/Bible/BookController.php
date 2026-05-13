@@ -23,8 +23,34 @@ class BookController
             $body = json_encode($res);
             $response->getBody()->write($body);
             $message->data = $body;
-            return $resp->write($message, 200);               
+            return $resp->write($message, 200);   
+        } catch (\PDOException $e) {
+            return $resp->write(new ResponseMessage(false, null, $e->getMessage()), 500);  
+        }
+    }
 
+    function booksFromTestament(Request $request, Response $response, array $args): Response{
+        $resp = new ResponseHelper($response);        
+        $message = new ResponseMessage(true);
+        try {           
+            $res = $this->repo->getBooksFromTestament($args['testament']);
+            $body = json_encode($res);
+            $response->getBody()->write($body);
+            $message->data = $body;
+            return $resp->write($message, 200);   
+        } catch (\PDOException $e) {
+            return $resp->write(new ResponseMessage(false, null, $e->getMessage()), 500);  
+        }
+    }
+    function bookFromBook(Request $request, Response $response, array $args): Response{
+        $resp = new ResponseHelper($response);        
+        $message = new ResponseMessage(true);
+        try {           
+            $res = $this->repo->getBookFromBook($args['book']);
+            $body = json_encode($res);
+            $response->getBody()->write($body);
+            $message->data = $body;
+            return $resp->write($message, 200);   
         } catch (\PDOException $e) {
             return $resp->write(new ResponseMessage(false, null, $e->getMessage()), 500);  
         }

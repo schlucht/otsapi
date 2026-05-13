@@ -9,8 +9,9 @@ use DateTime;
 class BookModel 
 {
     public int $id;    
-    public TestamentModel $testament;
+    public string $testament;
     public string $name;
+    public array $alternativeNames;
     public string $abbreviation;
     public string $author;
     public string $year;
